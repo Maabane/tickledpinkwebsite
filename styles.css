@@ -148,3 +148,29 @@ footer {
 .about-us p {
     margin-bottom: 15px; /* Add space below each paragraph */
 }
+
+.footer-background {
+    background-image: url('path/to/your/image.jpg');
+    background-size: cover; /* Stretch the image to cover the entire footer */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    padding: 50px 0; /* Add padding as needed */
+    text-align: center; /* Center-align the content */
+}
+
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.product {
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+}
