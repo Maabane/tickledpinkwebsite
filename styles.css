@@ -18,7 +18,16 @@ header {
     font-size: 36px; /* Adjust the font size to make it larger */
 }
 
+
 #home {
+    text-align: center;
+}
+
+#aboutus {
+    text-align: center;
+}
+
+#about {
     text-align: center;
 }
 
@@ -118,9 +127,10 @@ footer {
 .social-icon-link a {
     margin-right: 5px; /* Add some space between icon and text */
 }
+
 .products-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid layout */
     gap: 20px; /* Gap between grid items */
 }
 
@@ -133,6 +143,8 @@ footer {
 .product img {
     display: block; /* Ensure images are block-level elements */
     margin: 0 auto; /* Center-align images */
+    max-width: 100%; /* Make images responsive */
+    height: auto;
 }
 
 .about-us {
@@ -158,19 +170,31 @@ footer {
     text-align: center; /* Center-align the content */
 }
 
-.products-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    header {
+        height: 200px; /* Adjust header height for smaller screens */
+    }
+
+    .products-container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust product grid columns for smaller screens */
+    }
+
+    .product {
+        padding: 15px; /* Adjust product padding for smaller screens */
+    }
+
+    .footer-content {
+        flex-direction: column; /* Arrange footer content in a column for smaller screens */
+    }
 }
 
-.product {
-    border: 1px solid #ccc;
-    padding: 20px;
-    text-align: center;
-}
+@media screen and (max-width: 480px) {
+    header {
+        height: 250px; /* Further adjust header height for even smaller screens */
+    }
 
-.product img {
-    width: 100%;
-    height: auto;
+    .products-container {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Further adjust product grid columns for even smaller screens */
+    }
 }
