@@ -1,12 +1,12 @@
 /* Basic styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; /* Default font */
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #000;
+    background-color: #000; /* Black color */
     color: #fff;
     padding: 10px 20px;
     display: flex;
@@ -14,73 +14,191 @@ header {
     align-items: center;
 }
 
-.nav-menu {
-    display: flex;
-    align-items: center;
+#home h2 {
+    font-size: 36px; /* Adjust the font size to make it larger */
 }
 
-.nav-menu ul {
+#home {
+    text-align: center;
+}
+
+#aboutus {
+    text-align: center;
+}
+
+#about {
+    text-align: center;
+}
+
+
+nav ul {
     list-style-type: none;
-    margin: 0;
     padding: 0;
+    margin: 0;
 }
 
-.nav-menu ul li {
-    display: inline-block;
+nav ul li {
+    display: inline;
     margin-right: 20px;
 }
 
-.nav-menu ul li a {
+nav ul li a {
     color: #fff;
     text-decoration: none;
 }
 
-.nav-toggle {
-    display: none;
-    cursor: pointer;
-}
-
-.main-content {
+main {
     padding: 20px;
 }
 
-.footer {
-    background-color: #FFC0CB;
+footer {
+    background-color: #FFC0CB; /* Pink color */
     color: #fff;
     text-align: center;
     padding: 10px 0;
 }
 
-/* Three dots menu toggle */
-@media screen and (max-width: 768px) {
-    .nav-toggle {
-        display: block;
-    }
+.italic-white {
+    font-family: 'Brush Script MT', cursive; /* Brush Script font */
+    font-style: italic; /* Italicize */
+    color: #fff;
+}
 
-    .nav-menu ul {
-        display: none;
-        position: absolute;
-        background-color: #000;
-        width: 100%;
-        left: 0;
-        top: 100%;
-        padding: 10px 0;
-        text-align: center;
-    }
+.pink {
+    color: #FFC0CB; /* Pink color */
+}
 
-    .nav-menu ul.active {
-        display: block;
-    }
+/* Dropdown styling */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
 
-    .nav-menu ul li {
-        display: block;
-        margin: 10px 0;
-    }
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f9f9f9;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start; /* Align items at the top */
+}
+
+.social-media {
+    text-align: center; /* Center the content */
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column; /* Arrange links in a column */
+    align-items: center; /* Center items horizontally */
+}
+
+.social-icon-link {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    margin-bottom: 10px; /* Add some space between icon-link pairs */
+}
+
+.social-icon-link a {
+    margin-right: 5px; /* Add some space between icon and text */
+}
+
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Three columns with equal width */
+    gap: 20px; /* Gap between grid items */
+}
+
+.product {
+    border: 1px solid #ccc; /* Add border for each product */
+    padding: 20px; /* Add padding */
+    text-align: center; /* Center-align text */
+}
+
+.product img {
+    display: block; /* Ensure images are block-level elements */
+    margin: 0 auto; /* Center-align images */
+    max-width: 100%; /* Ensure images don't exceed container width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.about-us {
+    text-align: center; /* Center-align the content */
+    margin-top: 50px; /* Add some space between the products and the About Us section */
+}
+
+.about-us h3 {
+    font-size: 24px; /* Adjust heading font size if needed */
+    margin-bottom: 20px; /* Add space below the heading */
+}
+
+.about p {
+    margin-bottom: 15px; /* Add space below each paragraph */
+}
+
+.about {
+    text-align: center; /* Center-align the content */
+    margin-top: 50px; /* Add some space between the products and the About Us section */
+}
+
+.about h3 {
+    font-size: 24px; /* Adjust heading font size if needed */
+    margin-bottom: 20px; /* Add space below the heading */
+}
+
+.about p {
+    margin-bottom: 15px; /* Add space below each paragraph */
+}
+
+.footer-background {
+    background-image: url('path/to/your/image.jpg');
+    background-size: cover; /* Stretch the image to cover the entire footer */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    padding: 50px 0; /* Add padding as needed */
+    text-align: center; /* Center-align the content */
 }
 
 /* Responsive styles */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
     header {
-        height: auto; /* Adjust header height */
+        height: auto; /* Adjust header height for smaller screens */
+    }
+
+    .products-container {
+        grid-template-columns: 1fr; /* Display products in a single column on smaller screens */
+    }
+
+    .product {
+        padding: 15px; /* Adjust product padding for smaller screens */
+    }
+
+    .footer-content {
+        flex-direction: column; /* Arrange footer content in a column for smaller screens */
     }
 }
